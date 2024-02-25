@@ -5,7 +5,7 @@ import { compose } from '@/utils/redux';
 import styles from './index.module.scss';
 import { Button } from 'antd';
 import LineTextLine from '@/components/lineTextLine/index';
-import themeStore from '@/utils/themeStore';
+import themeStore from '@/store/mobx/modules/themeStore';
 
 function themeUnit(props: any) {
     const { theme_value } = themeStore.data;

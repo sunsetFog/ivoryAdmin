@@ -42,6 +42,12 @@ class menuDesign extends Component {
                 icon: <AppstoreOutlined />,
                 children: [],
             },
+            {
+                label: '搭建项目',
+                key: 'type6',
+                icon: <AppstoreOutlined />,
+                children: [],
+            },
         ],
         openOfKeys: [],
     };

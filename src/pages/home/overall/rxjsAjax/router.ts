@@ -1,6 +1,6 @@
 export default {
     name: 'rxjsAjax',
-    menuType: 'type3',
+    menuType: 'type6',
     superior: '/home',
     content: () => import(/* webpackChunkName: "rxjsAjax" */ './index'),
 };
