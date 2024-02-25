@@ -7,7 +7,7 @@ import React, { Component } from 'react';
 import { Button } from 'antd';
 
 // 引入vuex   Store在API文档
-import Store from '@/reduxStore';
+import Store from '@/store/redux';
 
 // connect作用：this.props对象里加入state，dispatch，action方法 的属性
 // @connect(

@@ -1,6 +1,6 @@
 export default {
-    name: '状态管理redux',
-    menuType: 'type1',
+    name: 'redux',
+    menuType: 'type5',
     superior: '/home',
     content: () => import(/* webpackChunkName: "exRedux" */ './index'),
 };

@@ -1,6 +1,6 @@
 export default {
-    name: '状态管理mobx',
-    menuType: 'type2',
+    name: 'mobx-react-lite',
+    menuType: 'type5',
     superior: '/home',
     content: () => import(/* webpackChunkName: "exMobx" */ './index'),
 };

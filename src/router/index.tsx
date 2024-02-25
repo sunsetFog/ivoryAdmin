@@ -7,14 +7,14 @@ import SuspenseLazy from '@/components/SuspenseLazy';
 import { Navigate, RouteObject } from 'react-router-dom';
 import { extend } from 'dayjs';
 
-const Home = SuspenseLazy(() => import(/* webpackChunkName:"home" */ '@/routerView/home'));
+const Home = SuspenseLazy(() => import(/* webpackChunkName:"home" */ '@/pages/home'));
 
-const NotFound = SuspenseLazy(() => import(/* webpackChunkName:"not-found" */ '@/routerView/404'));
+const NotFound = SuspenseLazy(() => import(/* webpackChunkName:"not-found" */ '@/pages/404'));
 
 const DragonBoatFestival = SuspenseLazy(
     () =>
         import(
-            /* webpackChunkName:"dragonBoatFestival" */ '@/routerView/home/businessModule/dragonBoatFestival'
+            /* webpackChunkName:"dragonBoatFestival" */ '@/pages/home/businessModule/dragonBoatFestival'
         ),
 );
 
@@ -24,8 +24,9 @@ const files = require.context('../', true, /\/router\.ts$/);
 // console.log('files.keys()===', files.keys());
 files.keys().forEach((item) => {
     let filesObj = files(item).default;
-    // console.log('context===', filesObj);
-    filesObj.path = item.slice(12, -10);
+    console.log('context===', filesObj);
+    console.log('item===', item);
+    filesObj.path = item.slice(7, -10);
     filesObj.element = SuspenseLazy(filesObj.content);
     delete filesObj.content;
     if (filesObj.superior == '/home') {
@@ -35,6 +36,7 @@ files.keys().forEach((item) => {
         firstArr.push(filesObj);
     }
 });
+console.log('--homeArr--', homeArr);
 
 // const routes: RouteObject[] = [
 const routes = [

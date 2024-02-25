@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useRef, useContext } from 'react';
 import { connect, useSelector, useDispatch } from 'react-redux';
-import { modifyCount, fetchChannelList } from '@/reduxToolkitStore/modules/counterStore';
+import { modifyCount, fetchChannelList } from '@/store/reduxToolkit/modules/counterStore';
 
 import PropTypes from 'prop-types';
 import LineTextLine from '@/components/lineTextLine/index';
 
-function ExRedux(props) {
+function reduxToolkit(props) {
     console.log('--props对象--', props);
     /*
         使用数据
@@ -13,7 +13,6 @@ function ExRedux(props) {
         升级react-redux版本到7.1.1
      */
     const { count } = useSelector((state) => state.counter);
-
     // 修改数据
     const dispatch = useDispatch();
     const beanWay = () => {
@@ -40,11 +39,11 @@ function ExRedux(props) {
 }
 
 // 设置属性默认值
-ExRedux.defaultProps = {
+reduxToolkit.defaultProps = {
     colors: '绿色',
 };
 // 设置属性类型约束
-ExRedux.propTypes = {
+reduxToolkit.propTypes = {
     colors: PropTypes.string,
 };
 
@@ -55,6 +54,7 @@ function mapStateToProps(params) {
     };
 }
 
-export default connect(mapStateToProps)(ExRedux);
+// 用Provider, 才能用connect
+export default connect(mapStateToProps)(reduxToolkit);
 
-// export default ExRedux;
+// export default reduxToolkit;

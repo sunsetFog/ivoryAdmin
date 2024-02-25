@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
-import { StoresProvider, stores } from '@/store';
+import { StoresProvider, stores } from '@/store/mobx';
 import AppRouter from '@/AppRouter';
 // toolkitStore的使用
 import { Provider, connect } from 'react-redux'; // 用Provider, 才能用connect
-import toolkitStore from '@/reduxToolkitStore';
+import toolkitStore from '@/store/reduxToolkit';
+
 import Channel from '@/utils/rxjsAjax/channel/channel';
 
 // 加载全局样式
@@ -18,14 +19,14 @@ const root = ReactDOM.createRoot(rootElement as HTMLDivElement);
 // root.unmount();手动卸载组件
 root.render(
     <BrowserRouter basename='/'>
-        <StoresProvider value={stores}>
+        {/* <StoresProvider value={stores}>
             <Channel>
                 <AppRouter />
             </Channel>
-        </StoresProvider>
-        {/* <Provider store={toolkitStore}>
+        </StoresProvider> */}
+        <Provider store={toolkitStore}>
             <AppRouter />
-        </Provider> */}
+        </Provider>
     </BrowserRouter>,
     // <HashRouter>
     //     <StoresProvider value={stores}>
