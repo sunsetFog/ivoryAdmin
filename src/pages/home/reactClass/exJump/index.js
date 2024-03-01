@@ -13,19 +13,20 @@ import LineTextLine from '@/components/lineTextLine/index';
 // )
 
 /*
-
+版本6已报废
 import { withRouter } from 'react-router-dom';
 export default withRouter(YourComponent);此时props对象里有了history属性
 
 使用 history.push 进行页面跳转
 this.props.history.push('/another-page');
 
+版本6已报废
+import { useHistory } from 'react-router-dom';
+const history = useHistory();
 */
-
+import withNavigation from '@/@energy/ivoryDesign/@higherOrder/withNavigation';
 class Jump extends Component {
-    state = {
-        water: '水',
-    };
+    state = {};
 
     constructor(props) {
         super(props);
@@ -37,22 +38,23 @@ class Jump extends Component {
         console.log('--路由触发-2-', this.props);
     }
     peachWay = () => {
-        this.setState({
-            water: '冰',
-        });
+        // 会刷新页面
+        // window.location.href = '/home/reactClass/exJump?id=6';
+        // routes.push('/home/reactClass/exJump?id=6');
+        this.props.navigate('/home/reactClass/exJump?id=6');
     };
 
     render() {
         return (
             <section>
+                <LineTextLine>跳转</LineTextLine>
+                <button onClick={this.peachWay}>跳转</button>
                 <LineTextLine>Link跳转</LineTextLine>
                 {/*
                     不可以起样式名
                     编译：<a href='/'>Home</a>
                 */}
-                <Link to='/home/reactClass/exJump?id=1' onClick={this.peachWay}>
-                    跳转
-                </Link>
+                <Link to='/home/reactClass/exJump?id=1'>跳转</Link>
 
                 <LineTextLine>NavLink跳转</LineTextLine>
                 {/*
@@ -65,4 +67,4 @@ class Jump extends Component {
     }
 }
 
-export default Jump;
+export default withNavigation(Jump);

@@ -7,10 +7,10 @@ react编译器会将文件编译成作用于当前module的对象
 */
 import styles from './index.module.scss';
 
-import {formatContentItem, fixedXssContent} from '../../../utils';
+import { formatContentItem, fixedXssContent } from '../../../utils';
 
 const ActivityDescription = (props) => {
-    const {content} = props;
+    const { content } = props;
     const contentList = formatContentItem(content);
     let contentArr = JSON.parse(JSON.stringify(contentList));
     let boxArr = [];
@@ -31,7 +31,7 @@ const ActivityDescription = (props) => {
                         <div
                             key={index}
                             className={styles[`noticeItem${index + 1}`]}
-                            dangerouslySetInnerHTML={{__html: fixedXssContent(item)}}
+                            dangerouslySetInnerHTML={{ __html: fixedXssContent(item) }}
                         ></div>
                     );
                 })}

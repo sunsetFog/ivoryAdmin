@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef, useContext } from 'react';
 
 import About from '@/store/mobx/modules/about';
 import LineTextLine from '@/components/lineTextLine/index';
+// mobx-react-lite中间件，observer是重新渲染用的
 import { observer } from 'mobx-react-lite';
 import styles from './index.modules.scss';
 
