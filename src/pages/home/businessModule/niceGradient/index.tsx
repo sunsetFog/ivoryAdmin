@@ -43,6 +43,12 @@ function niceGradient(props: any) {
         <section className={styles.niceGradient}>
             <LineTextLine>好看的渐变</LineTextLine>
             <div className={styles.fishBox}></div>
+            <LineTextLine>好看的渐变</LineTextLine>
+            <div className={styles.autumn}></div>
+            <LineTextLine>按钮的渐变</LineTextLine>
+            <div className={styles.cartoon}></div>
+            <LineTextLine>按钮的渐变</LineTextLine>
+            <div className={styles.cosplay}></div>
         </section>
     );
 }

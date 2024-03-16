@@ -1,5 +1,5 @@
 /*
-路由懒加载
+路由预加载
 */
 // 魔法注释：自定义生成的chunk的名字，可以代码分割打包
 /* webpackChunkName:"home" */
@@ -30,7 +30,7 @@ webpackPrefetch 和 webpackPreload都是webpack的魔法注释,用于优化代�
 - prefetch兼容性较好。
 
 */
-import React, {Suspense, lazy} from 'react';
+import React, { Suspense, lazy } from 'react';
 
 const SuspenseLazy = (props: any) => {
     return <Suspense fallback={<>...</>}>{React.createElement(lazy(props))}</Suspense>;

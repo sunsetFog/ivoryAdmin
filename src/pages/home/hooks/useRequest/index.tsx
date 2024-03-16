@@ -13,12 +13,12 @@ function useRequestUnit(props) {
     */
     const { run: exchangeRun } = useRequest((sendingData = {}) => getInviteInfoReq(sendingData), {
         manual: true,
-        onSuccess: (result: any) => {
-            console.log('--onSuccess--', result);
+        onSuccess: (result: any, paramsArr: any) => {
+            console.log('--onSuccess--', result, paramsArr);
         },
     });
     const peachWay = () => {
-        exchangeRun({ id: 666 });
+        exchangeRun({ id: 666 }, 'to1');
     };
 
     return (
