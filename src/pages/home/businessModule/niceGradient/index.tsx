@@ -49,6 +49,8 @@ function niceGradient(props: any) {
             <div className={styles.cartoon}></div>
             <LineTextLine>按钮的渐变</LineTextLine>
             <div className={styles.cosplay}></div>
+            <LineTextLine>彩带</LineTextLine>
+            <div className={styles.ribbons}>恭喜抽中600万大奖！</div>
         </section>
     );
 }

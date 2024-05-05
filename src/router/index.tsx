@@ -11,12 +11,12 @@ const Home = SuspenseLazy(() => import(/* webpackChunkName:"home" */ '@/pages/ho
 
 const NotFound = SuspenseLazy(() => import(/* webpackChunkName:"not-found" */ '@/pages/404'));
 
-const DragonBoatFestival = SuspenseLazy(
-    () =>
-        import(
-            /* webpackChunkName:"dragonBoatFestival" */ '@/pages/home/businessModule/dragonBoatFestival'
-        ),
-);
+// const DragonBoatFestival = SuspenseLazy(
+//     () =>
+//         import(
+//             /* webpackChunkName:"dragonBoatFestival" */ '@/pages/home/businessModule/dragonBoatFestival'
+//         ),
+// );
 
 let firstArr = [];
 let homeArr = [];
@@ -58,12 +58,12 @@ const routes = [
             // },
         ],
     },
-    {
-        path: '/home/businessModule/dragonBoatFestival',
-        element: DragonBoatFestival,
-        name: '端午活动',
-        menuType: 'type3',
-    },
+    // {
+    //     path: '/home/businessModule/dragonBoatFestival',
+    //     element: DragonBoatFestival,
+    //     name: '端午活动',
+    //     menuType: 'type3',
+    // },
     // 未匹配到页面
     {
         path: '*',

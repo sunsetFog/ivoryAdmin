@@ -42,4 +42,22 @@
         box-shadow: inset 0 -3px 5px #fff, inset 0 4px 7px #bfcee9;
         backdrop-filter: blur(6.1535px);
     }
+    .ribbons {
+        width: 100%;
+        padding: 12px 60px;
+        font-size: 16px;
+        line-height: 25px;
+        color: #fff;
+        text-align: center;
+        background: linear-gradient(
+            90deg,
+            rgb(225 49 70 / 0%) 0%,
+            rgb(225 49 70 / 80%) 15.29%,
+            rgb(225 49 70 / 94%) 23.35%,
+            rgb(225 49 70 / 98%) 49.13%,
+            rgb(225 49 70 / 94%) 79.74%,
+            rgb(225 49 70 / 80%) 86.79%,
+            rgb(225 49 70 / 0%) 100%
+          );
+    }
 }
