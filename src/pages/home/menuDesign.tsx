@@ -48,6 +48,12 @@ class menuDesign extends Component {
                 icon: <AppstoreOutlined />,
                 children: [],
             },
+            {
+                label: 'typescript',
+                key: 'type7',
+                icon: <AppstoreOutlined />,
+                children: [],
+            },
         ],
         openOfKeys: [],
     };
