@@ -1,4 +1,4 @@
-import { get, post } from '@/utils/rxjsAjax';
+import { get, post } from '@/@energy/ivoryDesign/@http/rxjsAjax';
 let domain = 'http://localhost:8062/sky';
 
 // 获取抽奖记录

@@ -7,7 +7,7 @@ import AppRouter from '@/AppRouter';
 import { Provider, connect } from 'react-redux'; // 用Provider, 才能用connect
 import toolkitStore from '@/store/reduxToolkit';
 
-import Channel from '@/utils/rxjsAjax/channel/channel';
+import Channel from '@/@energy/ivoryDesign/@http/rxjsAjax/channel/channel';
 
 // 加载全局样式
 import '@root/global.css';
