@@ -75,6 +75,8 @@ function niceShadow(props: any) {
             <button className={styles.swanBox}>登陆</button>
             <LineTextLine>导航条的外部阴影</LineTextLine>
             <div className={styles.papaya}></div>
+            <LineTextLine>底部部阴影</LineTextLine>
+            <div className={styles.coconut}></div>
         </section>
     );
 }

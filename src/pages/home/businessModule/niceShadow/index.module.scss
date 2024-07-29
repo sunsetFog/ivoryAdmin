@@ -135,4 +135,13 @@
                 #b5d2eb 98.75%);
         box-shadow: 0 5px 12px 2px #d4e2f0;
     }
+    .coconut {
+        width: 100%;
+        height: 120px;
+        padding: 48px;
+        background-color: #fff;
+        background-image: linear-gradient(2deg, #fff .69%, #fdfeff 94.84%);
+        border-radius: 16px;
+        box-shadow: inset 0 -4px 0 0 #cdd9e8, 0 4px 10px 0 rgba(207, 217, 233, .66);
+    }
 }
