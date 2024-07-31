@@ -70,7 +70,7 @@ class LifeOfCycle extends Component<any, any> {
         console.log('--UNSAFE_componentWillUpdate--每次更新state顺序1', nextProps, nextState);
     }
     /*
-        已经更新回调
+        Dom更新后执行，相当于函数组件的useEffect
         参数1: 旧的props
         参数2: 旧的state
      */
