@@ -11,6 +11,5 @@ export function getInviteInfoReq(params: any = {}): Promise<any> {
     console.log('--参数6--', params);
     return post('/api/v3/invite/index', {
         body: JSON.stringify(params),
-        transformResponse: (data) => data,
     });
 }
