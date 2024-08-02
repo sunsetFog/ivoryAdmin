@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { observer } from 'mobx-react';
 // component
-import { compose } from '@/utils/redux';
+import { compose } from '@/@energy/ivoryDesign/@utils/redux';
 import PopupUnit from '@/@energy/ivoryDesign/web/components/popupUnit';
 import { convertCanvasToImage } from '@/@energy/ivoryDesign/@utils/html2canvas';
 

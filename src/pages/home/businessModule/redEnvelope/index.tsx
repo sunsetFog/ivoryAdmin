@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 // import { observer } from 'mobx-react';
 // component
-import { compose } from '@/utils/redux';
+import { compose } from '@/@energy/ivoryDesign/@utils/redux';
 import WebsocketUnit from '@/@energy/ivoryDesign/@higherOrder/websocketUnit';
 
 function redEnvelope(props: any) {
