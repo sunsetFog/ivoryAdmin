@@ -3,7 +3,6 @@ import { observer } from 'mobx-react';
 // component
 import { compose } from '@/@energy/ivoryDesign/@utils/redux';
 import PopupUnit from '@/@energy/ivoryDesign/web/components/popupUnit';
-import { convertCanvasToImage } from '@/@energy/ivoryDesign/@utils/html2canvas';
 
 import { nameSortIndex } from '@/@energy/ivoryDesign/@utils/sort';
 
@@ -25,16 +24,6 @@ function cabbageUnit(props: any) {
     return (
         <section>
             <PopupUnit>自定义弹窗</PopupUnit>
-            <br />
-            <br />
-            <button
-                id='toImg'
-                onClick={() => {
-                    convertCanvasToImage(document.getElementById('toImg'));
-                }}
-            >
-                元素转成图片
-            </button>
             <br />
             <br />
             <button
