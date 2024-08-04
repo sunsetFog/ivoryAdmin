@@ -19,8 +19,12 @@ UNSAFE_componentWillUpdate
 所以控制台有黄色警告
 如果要使用这些方法，请在方法前面加上UNSAFE_
 */
+interface Props {}
 
-class LifeOfCycle extends Component<any, any> {
+interface State {
+    painting: string;
+}
+class LifeOfCycle extends Component<Props, State> {
     // props 默认值
     public static defaultProps = {};
     /*
