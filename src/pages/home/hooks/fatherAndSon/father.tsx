@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useRef, useContext, createContext, createRef} from 'react';
+import React, { useState, useEffect, useRef, useContext, createContext, createRef } from 'react';
 
 import Son from './son';
 import LineTextLine from '@/components/lineTextLine/index';

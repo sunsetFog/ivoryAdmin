@@ -67,7 +67,7 @@ class Father extends Component {
                     <Son water={12}></Son>
                     {...draw} 简写   注入对象所有
                     Son用不了ref
-                    DefineContext.Provider是用来爷爷传孙子的 ???
+                    DefineContext.Provider是用来爷爷传孙子的
                 */}
 
                 <DefineContext.Provider value={this.state.message}>

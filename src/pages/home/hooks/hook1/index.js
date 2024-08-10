@@ -10,7 +10,8 @@ import LineTextLine from '@/components/lineTextLine/index';
 /*
 为了能让函数组件可以拥有自己的状态，所以从react v16.8开始，Hooks应运而生
 */
-function Cosplay(props) {
+// 设置默认值方式1 {title='天蓝色'}
+function Cosplay({ title }) {
     const [countOf1, setCount1] = useState(0);
     const [countOf2, setCount2] = useState(0);
     const h1Foo = useRef(createRef());
@@ -55,8 +56,6 @@ function Cosplay(props) {
         } else if (value == 2) {
             setCount2(countOf2 + 1);
         }
-        // 该函数内执行完，就执行定时器，所以还是旧值
-        setTimeout(() => dealWith(), 0);
     };
     const dealWith = () => {
         console.log('-dealWith-还是旧值-', countOf1, '---', countOf2);
@@ -87,21 +86,40 @@ function Cosplay(props) {
     );
 }
 
-// 设置属性默认值
+// 设置默认值方式2
 Cosplay.defaultProps = {
-    colors: '蓝色',
+    title: '蓝色',
 };
 // 设置属性类型约束
 Cosplay.propTypes = {
-    colors: PropTypes.string,
+    title: PropTypes.string,
 };
 
-function mapStateToProps(params) {
-    console.log('-mapStateToProps-', params);
+// 将 Redux 的 state 映射到组件的 props
+function mapStateToProps(state) {
+    console.log('-mapStateToProps-', state);
     return {
-        state: params.example,
+        example: state.example,
     };
 }
-// props对象加入了state,dispatch,history属性   history用于跳转
-// export default compose(connect(mapStateToProps))(Cosplay);
+
+// 将 action creators 映射到组件的 props
+const mapDispatchToProps = {
+    //import { someActionCreator } from './actions';
+    // someActionCreator,
+};
+
+/*
+import { connect } from 'react-redux';
+是 React 和 Redux 之间的桥梁
+将 Redux store 中的 state 和 dispatch 函数映射到 React 组件的 props 中
+
+import { compose } from 'redux';
+用于将多个函数组合在一起
+
+每次 createRef 都会创建一个新的 ref 对象，适合类组件的构造器里用
+useRef 是一个 React Hook，主要用于函数组件中，ref 对象不变
+*/
+
+// export default compose(connect(mapStateToProps, mapDispatchToProps))(Cosplay);
 export default Cosplay;

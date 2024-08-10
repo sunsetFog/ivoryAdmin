@@ -16,7 +16,7 @@ class Fly {
     @observable
     public theme = '';
 
-    // 是否登录成功
+    // 使用的
     @computed
     public get themeValue() {
         return this.theme;
