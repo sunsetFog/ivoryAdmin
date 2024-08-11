@@ -6,7 +6,7 @@
 -   webpack v5
 -   mobx v6
 -   mobx-react-lite v3
--   react-router-dom v6
+-   react-router-dom v6 --- v5 路由是用<Switch>的
 
 ## ⌛️ 安装项目依赖
 
