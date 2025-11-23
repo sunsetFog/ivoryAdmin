@@ -1,5 +1,5 @@
-import React, { Component, createContext, createRef } from 'react';
-const DefineContext = createContext();
+import React, { Component, createRef } from 'react';
+import { Provider } from './constants';
 // 状态管理
 // import {bindActionCreators} from 'redux';
 // import {connect} from 'react-redux';
@@ -18,7 +18,7 @@ class Father extends Component {
     state = {
         hill: '山6',
         water: '水6',
-        message: '父组件的数据',
+        message: '爷爷给孙子的数据',
     };
 
     constructor(props) {
@@ -70,9 +70,9 @@ class Father extends Component {
                     DefineContext.Provider是用来爷爷传孙子的
                 */}
 
-                <DefineContext.Provider value={this.state.message}>
+                <Provider value={this.state.message}>
                     <Son {...draw} ref={(node) => (this.childTab2 = node)}></Son>
-                </DefineContext.Provider>
+                </Provider>
             </section>
         );
     }

@@ -1,5 +1,5 @@
-import React, { Component, createContext } from 'react';
-const DefineContext = createContext();
+import React, { Component } from 'react';
+import { Consumer } from './constants';
 // 状态管理
 // import {bindActionCreators} from 'redux';
 // import {connect} from 'react-redux';
@@ -21,9 +21,9 @@ class Grandson extends Component {
     render() {
         return (
             <div>
-                <DefineContext.Consumer>
-                    {(value) => <div>---{value ? value : '默认，没收到爷爷数据'}---</div>}
-                </DefineContext.Consumer>
+                <Consumer>
+                    {(value) => <div>---{value}---</div>}
+                </Consumer>
             </div>
         );
     }

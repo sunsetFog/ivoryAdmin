@@ -8,7 +8,7 @@ import { observer } from 'mobx-react-lite';
 // import { observer } from 'mobx-react';
 import styles from './index.modules.scss';
 // 使用全局上下文
-import {useStores} from '@/store/mobx/index';
+import {useStores, MobxConsumer} from '@/store/mobx/index';
 
 function mobx1(props) {
     const { About: apple } = useStores();
@@ -21,6 +21,9 @@ function mobx1(props) {
     };
     return (
         <section className={styles.mobx1}>
+            <MobxConsumer>
+                {(value) => <div>---{value.About.count}---</div>}
+            </MobxConsumer>
             <LineTextLine>数据</LineTextLine>
             --{getCount}--
             <LineTextLine>action</LineTextLine>
