@@ -8,14 +8,10 @@ export const stores = { About };
 
 /*
 用于创建一个 Context 对象。Context 提供了一种通过组件树传递数据的方法，而不需要逐层传递 props。它非常适合用来共享全局数据，例如当前的主题、用户信息或语言设置
-*/
-export const storesContext = React.createContext(stores);
-/*
-自定义 Hook
-
 引用数据
 const { About } = useStores();
 */
+const storesContext = React.createContext(stores);
 export const useStores = () => React.useContext(storesContext);
 /*
 createContext().Provider

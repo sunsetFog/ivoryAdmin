@@ -38,6 +38,10 @@ class ExRedux extends Component {
     render() {
         return (
             <div>
+            {/*
+                reducer函数修改了状态页面没有重新渲染？？是不更新的，要本组件加个状态，修改状态为冰
+            */}
+                {Store.getState().nice.water}
                 <Button type='primary' onClick={this.changeApple.bind(this)}>
                     dispatch修改state
                 </Button>

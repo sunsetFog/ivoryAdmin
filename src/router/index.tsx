@@ -24,8 +24,8 @@ const files = require.context('../', true, /\/router\.ts$/);
 // console.log('files.keys()===', files.keys());
 files.keys().forEach((item) => {
     let filesObj = files(item).default;
-    console.log('context===', filesObj);
-    console.log('item===', item);
+    // console.log('context===', filesObj);
+    // console.log('item===', item);
     filesObj.path = item.slice(7, -10);
     filesObj.element = SuspenseLazy(filesObj.content);
     delete filesObj.content;
@@ -36,7 +36,7 @@ files.keys().forEach((item) => {
         firstArr.push(filesObj);
     }
 });
-console.log('--homeArr--', homeArr);
+// console.log('--homeArr--', homeArr);
 
 // const routes: RouteObject[] = [
 const routes = [

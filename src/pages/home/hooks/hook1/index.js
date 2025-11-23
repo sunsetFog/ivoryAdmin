@@ -2,8 +2,7 @@
 import React, { useState, useEffect, useRef, useContext, createContext, createRef } from 'react';
 const DefineContext = createContext();
 // import { useHistory } from 'react-router'
-import { compose } from 'redux';
-import { connect } from 'react-redux';
+
 import PropTypes from 'prop-types';
 
 import LineTextLine from '@/components/lineTextLine/index';
@@ -11,7 +10,8 @@ import LineTextLine from '@/components/lineTextLine/index';
 为了能让函数组件可以拥有自己的状态，所以从react v16.8开始，Hooks应运而生
 */
 // 设置默认值方式1 {title='天蓝色'}
-function Cosplay({ title }) {
+function Cosplay(props) {
+    console.log("--props--", props);
     const [countOf1, setCount1] = useState(0);
     const [countOf2, setCount2] = useState(0);
     const h1Foo = useRef(createRef());
@@ -95,31 +95,13 @@ Cosplay.propTypes = {
     title: PropTypes.string,
 };
 
-// 将 Redux 的 state 映射到组件的 props
-function mapStateToProps(state) {
-    console.log('-mapStateToProps-', state);
-    return {
-        example: state.example,
-    };
-}
 
-// 将 action creators 映射到组件的 props
-const mapDispatchToProps = {
-    //import { someActionCreator } from './actions';
-    // someActionCreator,
-};
 
 /*
-import { connect } from 'react-redux';
-是 React 和 Redux 之间的桥梁
-将 Redux store 中的 state 和 dispatch 函数映射到 React 组件的 props 中
-
-import { compose } from 'redux';
-用于将多个函数组合在一起
 
 每次 createRef 都会创建一个新的 ref 对象，适合类组件的构造器里用
 useRef 是一个 React Hook，主要用于函数组件中，ref 对象不变
 */
 
-// export default compose(connect(mapStateToProps, mapDispatchToProps))(Cosplay);
+
 export default Cosplay;

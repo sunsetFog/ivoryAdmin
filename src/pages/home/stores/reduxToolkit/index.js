@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useRef, useContext } from 'react';
+import { compose } from 'redux';
 import { connect, useSelector, useDispatch } from 'react-redux';
 import { modifyCount, fetchChannelList } from '@/store/reduxToolkit/modules/counterStore';
 
-import PropTypes from 'prop-types';
+
 import LineTextLine from '@/components/lineTextLine/index';
 
 function reduxToolkit(props) {
@@ -38,23 +39,29 @@ function reduxToolkit(props) {
     );
 }
 
-// 设置属性默认值
-reduxToolkit.defaultProps = {
-    colors: '绿色',
-};
-// 设置属性类型约束
-reduxToolkit.propTypes = {
-    colors: PropTypes.string,
-};
 
-function mapStateToProps(params) {
-    console.log('-hook2-mapStateToProps-', params);
+
+/*
+
+import { connect } from 'react-redux';
+是 React 和 Redux 之间的桥梁
+连接 React 组件与 Redux Store，将 Store 的 state 和 dispatch 映射为组件的 props
+
+import { compose } from 'redux';
+组合多个高阶函数
+
+*/
+
+function mapStateToProps(state) {
+    console.log('-mapStateToProps-', state);
     return {
-        state: params.counter,
+        state: state,
     };
 }
+// 将 action creators 映射到组件的 props
+const mapDispatchToProps = { modifyCount, fetchChannelList };
 
-// 用Provider, 才能用connect
-export default connect(mapStateToProps)(reduxToolkit);
+// 用Provider, 才能用connect    看/ivoryAdmin/src/index.tsx
+export default compose(connect(mapStateToProps, mapDispatchToProps))(reduxToolkit);
 
 // export default reduxToolkit;

@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef, useContext } from 'react';
 // import { useHistory } from 'react-router'
-import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import LineTextLine from '@/components/lineTextLine/index';
 
@@ -39,12 +38,5 @@ InstructUnit.propTypes = {
     colors: PropTypes.string,
 };
 
-function mapStateToProps(params) {
-    console.log('-mapStateToProps-', params);
-    return {
-        state: params.example,
-    };
-}
 
-// export default connect(mapStateToProps)(InstructUnit);
 export default InstructUnit;
