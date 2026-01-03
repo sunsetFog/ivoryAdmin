@@ -7,7 +7,7 @@ import { Provider } from './constants';
 
 // 引入子组件  名字要大写
 import Son from './son';
-import LineTextLine from '@/components/lineTextLine/index';
+import LineTextLine from '@/@energy/ivoryDesign/components/lineTextLine/index';
 
 // @connect(
 //     state => ({nice: state.nice}),

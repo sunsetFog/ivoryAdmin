@@ -37,7 +37,7 @@ import AddModal from './addModal';
 import TableService3 from '@/@energy/ivoryDesign/@library/tableService3';
 
 // 第一个是export default导出，第二个export导出
-import hocTabPage, { initState } from '@/@energy/ivoryDesign/@higherOrder/hocTabPage';
+import WithTabPage, { initState } from '@/@energy/ivoryDesign/@higherOrder/hocTabPage';
 
 // @connect(
 //     state => ({ nice: state.nice }),
@@ -148,5 +148,5 @@ export default compose(
     //       user: state.user,
     //     }
     // }),
-    hocTabPage({ tabList: [16] }), // 反向继承，防止于最后
+    WithTabPage({ tabList: [16] }), // 反向继承，防止于最后
 )(Beautiful);

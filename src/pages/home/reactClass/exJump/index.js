@@ -5,7 +5,7 @@ import React, { Component } from 'react';
 // import * as niceActions from '~/redux/reduces/nice.js';
 
 import { Link, NavLink } from 'react-router-dom';
-import LineTextLine from '@/components/lineTextLine/index';
+import LineTextLine from '@/@energy/ivoryDesign/components/lineTextLine/index';
 
 // @connect(
 //     state => ({nice: state.nice}),

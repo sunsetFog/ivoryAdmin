@@ -3,7 +3,7 @@ import { observer } from 'mobx-react';
 // component
 import { compose } from '@/@energy/ivoryDesign/@utils/redux';
 import styles from './index.module.scss';
-import LineTextLine from '@/components/lineTextLine/index';
+import LineTextLine from '@/@energy/ivoryDesign/components/lineTextLine/index';
 /*
 box-shadow: inset h-shadow v-shadow blur spread color;
 inset：内部阴影，不写就是外阴影。

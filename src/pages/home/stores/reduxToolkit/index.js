@@ -4,7 +4,7 @@ import { connect, useSelector, useDispatch } from 'react-redux';
 import { modifyCount, fetchChannelList } from '@/store/reduxToolkit/modules/counterStore';
 
 
-import LineTextLine from '@/components/lineTextLine/index';
+import LineTextLine from '@/@energy/ivoryDesign/components/lineTextLine/index';
 
 function reduxToolkit(props) {
     console.log('--props对象--', props);

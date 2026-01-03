@@ -1,7 +1,7 @@
 // React应该是底层在调用，得引入
 import React, { useState, useEffect, useRef } from 'react';
 import { useSetState, useRequest } from 'ahooks';
-import LineTextLine from '@/components/lineTextLine/index';
+import LineTextLine from '@/@energy/ivoryDesign/components/lineTextLine/index';
 
 function inputUnit(props) {
     const [intActive, setIntOfActive] = useState(false);

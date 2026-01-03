@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef, useContext, createContext, createRef } from 'react';
 
 import Son from './son';
-import LineTextLine from '@/components/lineTextLine/index';
+import LineTextLine from '@/@energy/ivoryDesign/components/lineTextLine/index';
 
 function Father(props) {
     let refHolder = useRef<any>(createRef());

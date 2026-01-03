@@ -8,7 +8,7 @@ import React, {Component, useState} from 'react';
 import logoimg from '@/assets/logo.png';
 
 import {Button, theme, Modal} from 'antd';
-import LineTextLine from '@/components/lineTextLine/index';
+import LineTextLine from '@/@energy/ivoryDesign/components/lineTextLine/index';
 import styles from './index.modules.scss';
 
 // @connect(

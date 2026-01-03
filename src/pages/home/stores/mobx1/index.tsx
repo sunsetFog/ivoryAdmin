@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef, useContext } from 'react';
 
 import About from '@/store/mobx/modules/about';
-import LineTextLine from '@/components/lineTextLine/index';
+import LineTextLine from '@/@energy/ivoryDesign/components/lineTextLine/index';
 // mobx-react-lite中间件，observer是当 MobX 中的状态发生变化时，观察者组件会自动重新渲染，以反映最新的状态
 import { observer } from 'mobx-react-lite';
 // 用这个也行

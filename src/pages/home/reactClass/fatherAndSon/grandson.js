@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Consumer } from './constants';
+import { Consumer, ThemeOfContext } from './constants';
 // 状态管理
 // import {bindActionCreators} from 'redux';
 // import {connect} from 'react-redux';
@@ -17,6 +17,9 @@ class Grandson extends Component {
         super(props);
         console.log('--constructor--Grandson数据的初始化', this);
     }
+    componentDidMount() {
+        console.log('--useContext使用Context数据--', this.props.useThemeContext);
+    }
 
     render() {
         return (
@@ -29,4 +32,4 @@ class Grandson extends Component {
     }
 }
 
-export default Grandson;
+export default ThemeOfContext(Grandson);

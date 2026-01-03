@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useSetState, useRequest } from 'ahooks';
 import { useNavigate, NavLink, useLocation, useParams } from 'react-router-dom';
-import LineTextLine from '@/components/lineTextLine/index';
+import LineTextLine from '@/@energy/ivoryDesign/components/lineTextLine/index';
 
 function toJump(props) {
     const routerParams1 = useLocation();

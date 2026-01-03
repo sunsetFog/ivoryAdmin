@@ -2,6 +2,7 @@ import React from 'react';
 import Home from '@/pages/home/index';
 import NotFound from '@/pages/404/index';
 /*
+study: 路由表的两种方式
 react-router-dom升级 v6
 Routes 替换 Switch
 Navigate 替换 Redirect

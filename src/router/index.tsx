@@ -3,7 +3,7 @@
  * https://reactrouter.com/en/v6.3.0/getting-started/installation
  */
 import React from 'react';
-import SuspenseLazy from '@/components/SuspenseLazy';
+import SuspenseLazy from '@/@energy/ivoryDesign/components/SuspenseLazy';
 import { Navigate, RouteObject } from 'react-router-dom';
 import { extend } from 'dayjs';
 
@@ -37,7 +37,7 @@ files.keys().forEach((item) => {
     }
 });
 // console.log('--homeArr--', homeArr);
-
+// study: 路由表的两种方式
 // const routes: RouteObject[] = [
 const routes = [
     ...firstArr,

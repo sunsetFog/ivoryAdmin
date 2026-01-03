@@ -1,5 +1,5 @@
 import React, {useState, useEffect, useRef, useContext, createContext, createRef} from 'react';
-import LineTextLine from '@/components/lineTextLine/index';
+import LineTextLine from '@/@energy/ivoryDesign/components/lineTextLine/index';
 function Grandson(props) {
     return (
         <section>

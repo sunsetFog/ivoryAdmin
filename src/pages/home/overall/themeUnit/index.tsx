@@ -4,7 +4,7 @@ import { observer } from 'mobx-react';
 import { compose } from '@/@energy/ivoryDesign/@utils/redux';
 import styles from './index.module.scss';
 import { Button } from 'antd';
-import LineTextLine from '@/components/lineTextLine/index';
+import LineTextLine from '@/@energy/ivoryDesign/components/lineTextLine/index';
 import themeStore from '@/store/mobx/modules/themeStore';
 
 function themeUnit(props: any) {

@@ -5,7 +5,7 @@ const DefineContext = createContext();
 
 import PropTypes from 'prop-types';
 
-import LineTextLine from '@/components/lineTextLine/index';
+import LineTextLine from '@/@energy/ivoryDesign/components/lineTextLine/index';
 /*
 为了能让函数组件可以拥有自己的状态，所以从react v16.8开始，Hooks应运而生
 */

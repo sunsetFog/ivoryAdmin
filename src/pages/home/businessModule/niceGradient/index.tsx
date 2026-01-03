@@ -3,7 +3,7 @@ import { observer } from 'mobx-react';
 // component
 import { compose } from '@/@energy/ivoryDesign/@utils/redux';
 import styles from './index.module.scss';
-import LineTextLine from '@/components/lineTextLine/index';
+import LineTextLine from '@/@energy/ivoryDesign/components/lineTextLine/index';
 /*
 
 线性渐变

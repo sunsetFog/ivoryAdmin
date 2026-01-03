@@ -10,7 +10,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import Grandson from './grandson';
-import LineTextLine from '@/components/lineTextLine/index';
+import LineTextLine from '@/@energy/ivoryDesign/components/lineTextLine/index';
 
 // @connect(
 //     state => ({nice: state.nice}),
@@ -37,9 +37,7 @@ class Son extends Component {
         console.log('父组件传的参数=', this.props);
     }
     /*
-        getDerivedStateFromProps组件生命周期，调用 render 方法之前调用
-        父传子
-        作用：props变化时更新state
+        props变化时更新state
         https://www.runoob.com/react/react-ref-getderivedstatefromprops.html
     */
     static getDerivedStateFromProps(nextProps, prevState) {
@@ -49,7 +47,7 @@ class Son extends Component {
         };
     }
 
-    // 子传父也是用props属性
+    // 子传父，调用父方法带参数过去的
     cakes() {
         this.props.flower('子组件参数');
     }

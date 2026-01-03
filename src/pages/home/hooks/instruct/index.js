@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef, useContext } from 'react';
 // import { useHistory } from 'react-router'
 import PropTypes from 'prop-types';
-import LineTextLine from '@/components/lineTextLine/index';
+import LineTextLine from '@/@energy/ivoryDesign/components/lineTextLine/index';
 
 function InstructUnit(props) {
     const [openBay, setOpenBay] = useState(false);
