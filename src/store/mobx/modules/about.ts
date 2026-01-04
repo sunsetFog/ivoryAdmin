@@ -1,9 +1,17 @@
 import { makeObservable, observable, action, computed, flow } from 'mobx';
 
+/*
+安装依赖
+mobx
+mobx-react-lite
+*/
+
 class About {
+    // 定义数据
     count = 0;
     constructor() {
         /**
+         * 响应式处理
          * makeObservable 与 makeAutoObservable区别在于：
          * makeObservable: 需要显式地指定要转换为可观察对象的属性和方法。
          * makeAutoObservable: 自动将所有属性和方法转换为可观察对象。
@@ -19,12 +27,12 @@ class About {
             incrementAsync: flow,
         });
     }
-
+    // 计算属性
     get getCount() {
         console.log('--getCount--', this.count);
         return this.count;
     }
-
+    // 修改数据
     aboutAddCount = (num) => {
         console.log('--aboutAddCount--', num);
         this.count = num;

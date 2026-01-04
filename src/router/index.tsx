@@ -38,6 +38,7 @@ files.keys().forEach((item) => {
 });
 // console.log('--homeArr--', homeArr);
 // study: 路由表的两种方式
+// 集中式路由配置
 // const routes: RouteObject[] = [
 const routes = [
     ...firstArr,

@@ -75,7 +75,7 @@ class Nice extends Component {
 
                     <main className={styles['gourdBox']}>
                         <article className={styles['pen-router-view']}>
-                            {/* Outlet支持嵌套路由 */}
+                            {/* Outlet支持嵌套路由，路由出口 */}
                             <Outlet />
                         </article>
                         <Watermark></Watermark>
